@@ -1,6 +1,6 @@
 # sociaworld
 
-Sociaworld sosyal medya uygulamasi.
+Sociaworld sosyal medya uygulamasi tasarimi.
 
 ## Getting Started
 
