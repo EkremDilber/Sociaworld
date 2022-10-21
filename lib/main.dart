@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:sociaworld/profilsayfasi.dart';
 import 'gonderikarti.dart';
 
@@ -10,10 +9,6 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.blue[600], // Status Bar rengi
-    ));
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Sociaworld',
@@ -34,61 +29,21 @@ class _AnaSayfaState extends State<AnaSayfa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        backgroundColor: Colors.white, //Drawer Arka Plan Rengi
-        child: ListView(
-          padding: EdgeInsets.all(0.0),
-          children: [
-            UserAccountsDrawerHeader(
-              accountName: Text("Ekrem Dilber"),
-              accountEmail: Text("ekremdilber@gmail.com"),
-              currentAccountPicture: Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      "https://cdn.pixabay.com/photo/2014/04/02/10/25/man-303792_960_720.png",
-                    ),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(50.0),
-                ),
-              ),
-              decoration: BoxDecoration(
-                color: Colors.blue[600], //Drawer Üst Kısım Rengi
-              ),
-            ),
-            ListTile(
-              title: Text("Profilim"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("Hesap Ayarları"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("Yardım"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("Çıkış Yap"),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle.light,
-        backgroundColor: Colors.blue[600],
-        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Colors.grey[100],
         elevation: 0.0,
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.menu),
+          color: Colors.grey,
+          iconSize: 32.0,
+        ),
         title: const Text(
           "Sociaworld",
           style: TextStyle(
             fontSize: 20.0,
-            color: Colors.white,
+            color: Colors.grey,
           ),
         ),
         centerTitle: true,
@@ -109,14 +64,13 @@ class _AnaSayfaState extends State<AnaSayfa> {
                   });
             },
             icon: const Icon(Icons.notifications),
-            color: Colors.white,
+            color: Colors.purple[500],
             iconSize: 32.0,
           ),
         ],
       ),
       body: ListView(
         children: <Widget>[
-          SizedBox(height: 1.0),
           Container(
             width: double.infinity,
             height: 100.0,
@@ -205,7 +159,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: null,
-        backgroundColor: Colors.blue[600],
+        backgroundColor: Colors.purple[400],
         child: Icon(
           Icons.add_a_photo,
           color: Colors.white,
