@@ -28,7 +28,7 @@ class GonderiKarti extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.all(15.0),
           width: double.infinity,
-          height: 390.0,
+          height: 380.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12.0),
             color: Colors.white,
@@ -78,9 +78,7 @@ class GonderiKarti extends StatelessWidget {
                   Icon(Icons.more_vert)
                 ],
               ),
-              SizedBox(
-                height: 15.0,
-              ),
+              SizedBox(height: 15.0),
               Text(
                 aciklama,
                 style: TextStyle(
